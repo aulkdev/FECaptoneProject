@@ -4,7 +4,7 @@ import Nav from './Nav'
 function Header(){
     return(
         <header>
-            <img src={logo}/>
+            <img id="logoimage" src={logo}/>
             <Nav/>
         </header>
     )

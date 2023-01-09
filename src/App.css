@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Markazi+Text&display=swap");
 .App {
   text-align: center;
 }
@@ -5,6 +6,28 @@
 .App-logo {
   height: 40vmin;
   pointer-events: none;
+}
+header {
+  display: flex;
+  justify-content: flex-start;
+  margin-left: 10vw;
+  gap: 20vw;
+}
+#logoimage {
+  width: 200px;
+}
+nav#topnav ul {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  font-size: 2em;
+  gap: 10vw;
+}
+nav#topnav ul li a {
+  text-decoration: none;
+  color: black;
+  font-family: "Markazi Text", serif;
+  font-weight: 500;
 }
 
 @media (prefers-reduced-motion: no-preference) {

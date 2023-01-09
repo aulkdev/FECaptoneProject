@@ -1,0 +1,12 @@
+.confirmelement {
+  grid-area: 5/1/5/2;
+}
+.confirmelement input {
+  height: 20px;
+  width: 20px;
+  margin-right: 10px;
+}
+.confirmelement label {
+  font-family: "Karla", sans-serif;
+  font-size: 25px;
+}

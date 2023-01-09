@@ -14,3 +14,15 @@
   border-radius: 16px;
   font-size: 32px;
 }
+.my21grid {
+  grid-area: 2/1/2/1;
+}
+.my22grid {
+  grid-area: 2/2/2/2;
+}
+.my41grid {
+  grid-area: 4/1/4/1;
+}
+.my42grid {
+  grid-area: 4/2/4/2;
+}

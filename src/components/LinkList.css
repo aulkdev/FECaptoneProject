@@ -1,0 +1,14 @@
+.linklist {
+  display: flex;
+  flex-direction: column;
+  font-family: "Karla", sans-serif;
+  gap: 5px;
+}
+.linklist h4 {
+  font-size: 20px;
+}
+.linklist a {
+  font-size: 18px;
+  text-decoration: none;
+  color: black;
+}

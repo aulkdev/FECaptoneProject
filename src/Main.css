@@ -13,5 +13,5 @@ main #form {
   height: 80%;
   display: grid;
   grid-template-columns: repeat(2, 40vw);
-  grid-template-rows: 1.5fr repeat(4, 1fr) 1.5fr;
+  grid-template-rows: 1.5fr 1fr 1.5fr 1fr 0.5fr 1fr;
 }

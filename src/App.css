@@ -12,6 +12,7 @@ header {
   justify-content: flex-start;
   margin-left: 10vw;
   gap: 20vw;
+  align-items: center;
 }
 #logoimage {
   width: 200px;
@@ -28,6 +29,17 @@ nav#topnav ul li a {
   color: black;
   font-family: "Markazi Text", serif;
   font-weight: 500;
+}
+nav#topnav {
+  display: flex;
+  gap: 10vw;
+}
+nav#topnav a {
+  text-decoration: none;
+  color: black;
+  font-family: "Markazi Text", serif;
+  font-weight: 500;
+  font-size: 30px;
 }
 
 @media (prefers-reduced-motion: no-preference) {

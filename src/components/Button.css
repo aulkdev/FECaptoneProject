@@ -13,5 +13,10 @@
 }
 
 .my61grid {
-  grid-area: 6/1/6/1;
+  grid-area: 6/1/6/3;
+}
+@media only screen and (max-width: 820px) {
+  .button {
+    font-size: 1.5em;
+  }
 }

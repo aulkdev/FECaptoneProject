@@ -5,3 +5,13 @@ footer {
   margin-left: 10vw;
   gap: 20vw;
 }
+@media only screen and (max-width: 820px) {
+  footer {
+    gap: 5vw;
+    margin-left: 3vw;
+    padding-bottom: 30px;
+  }
+  footer #logoimage {
+    width: 100px;
+  }
+}

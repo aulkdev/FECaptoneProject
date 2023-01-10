@@ -1,0 +1,145 @@
+section.herosection {
+  display: grid;
+  height: 300px;
+  grid-template-columns: 0.2fr 1fr 1fr 0.2fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  background-color: #495e57;
+}
+section.herosection img {
+  width: 45vh;
+  grid-area: 1/3/4/3;
+  justify-self: center;
+  align-self: center;
+}
+section.herosection h1,
+section.highlightsection h2 {
+  grid-area: 1/2/1/2;
+  font-family: "Markazi Text", serif;
+  font-size: 40px;
+  color: #f4ce14;
+  margin: 0px 0px;
+  align-self: center;
+}
+section.herosection p {
+  grid-area: 2/2/2/2;
+  font-family: "Karla", sans-serif;
+  font-size: 22px;
+  font-weight: 600;
+}
+section.herosection a {
+  grid-area: 3/2/3/2;
+}
+
+section.highlightsection {
+  display: grid;
+  height: 600px;
+  grid-template-columns: 0.2fr 1fr 1fr 1fr 0.2fr;
+  grid-template-rows: 0.5 2fr;
+}
+section.highlightsection h2 {
+  color: black;
+  margin-left: 15%;
+}
+section.highlightsection div.foodcard {
+  justify-self: center;
+}
+section.highlightsection div.foodcard:nth-of-type(1) {
+  grid-area: 2/2/2/2;
+}
+section.highlightsection div.foodcard:nth-of-type(2) {
+  grid-area: 2/3/2/3;
+}
+section.highlightsection div.foodcard:nth-of-type(3) {
+  grid-area: 2/4/2/4;
+}
+section.highlightsection button.button {
+  height: 40%;
+  justify-self: center;
+}
+section.testamonialsection {
+  display: grid;
+  height: 300px;
+  grid-template-columns: 0.2fr 1fr 1fr 0.2fr;
+  grid-template-rows: 1fr 1fr;
+}
+section.testamonialsection div.testamonial {
+  justify-self: center;
+}
+section.testamonialsection div.testamonial:nth-of-type(1) {
+  grid-area: 1/2/1/2;
+}
+section.testamonialsection div.testamonial:nth-of-type(2) {
+  grid-area: 1/3/1/3;
+}
+section.testamonialsection div.testamonial:nth-of-type(3) {
+  grid-area: 2/2/2/2;
+}
+section.testamonialsection div.testamonial:nth-of-type(4) {
+  grid-area: 2/3/2/3;
+}
+section.aboutsection {
+  display: flex;
+  justify-content: space-around;
+  background-color: #495e57;
+}
+section.aboutsection img {
+  width: 45vh;
+  margin: 30px;
+  object-fit: cover;
+}
+section.aboutsection p {
+  font-family: "Karla", sans-serif;
+  color: white;
+  font-size: 25px;
+  width: 40%;
+  align-self: center;
+}
+
+@media only screen and (max-width: 1300px) {
+  section.testamonialsection {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 500px;
+    gap: 30px;
+  }
+}
+@media only screen and (max-width: 800px) {
+  section.highlightsection {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+  }
+  section.highlightsection h2 {
+    margin: 0px;
+  }
+  section.highlightsection button {
+    width: 250px;
+    height: 10% !important;
+  }
+  section.highlightsection div.foodcard:nth-of-type(1) {
+    grid-area: 2/3/2/3;
+  }
+  section.highlightsection div.foodcard:nth-of-type(2),
+  section.highlightsection div.foodcard:nth-of-type(3) {
+    display: none;
+  }
+  section.aboutsection img {
+    width: 30vw;
+  }
+  section.herosection img {
+    margin-top: 30px;
+  }
+  section.herosection {
+    display: flex;
+    flex-direction: column;
+    height: 60vh;
+    padding: 50px;
+    gap: 10px;
+  }
+  section.herosection button {
+    height: 100%;
+    width: 100%;
+  }
+}

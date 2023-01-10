@@ -1,0 +1,42 @@
+div.testamonial {
+  background-color: #edefee;
+  width: 30vw;
+  height: 80px;
+  border-radius: 16px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 20px;
+  font-family: "Karla", sans-serif;
+}
+div.testamonial span.profilepicture {
+  height: 60px;
+  width: 60px;
+  background-color: white;
+  border-radius: 50px;
+  margin-left: 30px;
+}
+div.testamonial p.review {
+  font-size: 20px;
+  margin: 0px;
+  text-overflow: clip;
+}
+div.testamonial p.name {
+  margin: 0px;
+}
+div.testamonial div.text {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 70%;
+}
+
+@media only screen and (max-width: 1300px) {
+  div.testamonial {
+    width: 70vw;
+    height: 90px;
+  }
+  div.testamonial p.review {
+    font-size: 15px;
+  }
+}

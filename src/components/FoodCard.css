@@ -1,0 +1,35 @@
+div.foodcard {
+  height: 350px;
+  width: 250px;
+  background-color: #495e57;
+  border-radius: 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+div.foodcard img {
+  width: 80%;
+  height: 40%;
+  object-fit: cover;
+  margin-top: 10%;
+}
+div.foodinfo {
+  display: flex;
+  flex-direction: column;
+}
+div.foodinfo h4 {
+  font-family: "Markazi Text", serif;
+  font-size: 30px;
+  align-self: flex-start;
+  margin: 0px;
+  margin-left: 10%;
+  color: white;
+}
+div.foodinfo p {
+  font-family: "Karla", sans-serif;
+  font-size: 20px;
+  margin: 0px;
+  margin-left: 10%;
+  margin-right: 10%;
+}

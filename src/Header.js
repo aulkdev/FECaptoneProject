@@ -16,9 +16,9 @@ function Header(){
             </nav>
         </header>
 
-        <Routes> 
-            <Route path="/" element={<Home/>}></Route>
-            <Route path="/booking" element={<Main/>}></Route>
+        <Routes>
+            <Route path="/" element={<Home/>}></Route>
+            <Route path="/booking" element={<Main/>}></Route>
         </Routes>
         </>
 

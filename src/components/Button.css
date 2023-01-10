@@ -15,6 +15,9 @@
 .my61grid {
   grid-area: 6/1/6/3;
 }
+.my32grid {
+  grid-area: 3/2/3/2;
+}
 @media only screen and (max-width: 820px) {
   .button {
     font-size: 1.5em;

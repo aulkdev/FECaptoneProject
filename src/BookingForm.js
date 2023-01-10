@@ -5,12 +5,13 @@ import DatePicker from './components/DatePicker';
 import ConfirmElement from './components/ConfirmElement';
 import Button from './components/Button';
 import {useState, useReducer, useEffect} from 'react';
+import {fetchAPI, submitAPI} from './components/api'
 
-function BookingForm(){
+function BookingForm(props){
     let monthlookup = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"]
     let daylookup = ["SUN","MON","TUE","WED","THU","FRI","SAT"]
     let dates = []
-    let curDate = new Date()
+    let curDate = new Date("Jan 9")
     for (let i = 0; i<7;i++){
         dates.push([daylookup[curDate.getDay()],`${monthlookup[curDate.getMonth()]} ${curDate.getDate()}`])
         curDate.setDate(curDate.getDate()+1)
@@ -43,16 +44,26 @@ function BookingForm(){
     const getTimes = () => {
         if (chosendate === ""){
             return []
-        }
-        if (["SUN","MON","TUE"].includes(chosendate.split(',')[0])){
-            return ["12pm","1pm","2pm","3pm","4pm"]
         }else{
-            return ["2pm","3pm","4pm","5pm","6pm"]
+            const result = fetchAPI(new Date(chosendate.split(',')[1]))
+            //console.log(result)
+            return result
         }
+        // if (chosendate === ""){
+        //     return []
+        // }
+        // if (["SUN","MON","TUE"].includes(chosendate.split(',')[0])){
+        //     return ["12pm","1pm","2pm","3pm","4pm"]
+        // }else{
+        //     return ["2pm","3pm","4pm","5pm","6pm"]
+        // }
     }
     const handleClick = (e) => {
         e.preventDefault()
         console.log(state)
+            if(submitAPI(state)){
+                props.navigator("/confirmed-booking")
+            }
     }
 
 

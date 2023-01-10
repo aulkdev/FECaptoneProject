@@ -11,7 +11,7 @@ function ListInput(props){
                 }}className="textinput" name={props.inputname} id={props.inputname}  >
                 {
                     props.items.map(i => (
-                        <option value={i}>{i}</option>
+                        <option key={i}value={i}>{i}</option>
                     ))
                 }
             </select>

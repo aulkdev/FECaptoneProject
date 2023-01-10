@@ -3,9 +3,10 @@ import Nav from './Nav'
 
 import BookingForm from './BookingForm'
 import Home from './Home'
+import ConfirmedBooking from './ConfirmedBooking'
 import {Routes, Route, Link} from 'react-router-dom';
 
-function Header(){
+function Header(props){
     return(
         <>
         <header>
@@ -18,7 +19,8 @@ function Header(){
 
         <Routes>
             <Route path="/" element={<Home/>}></Route>
-            <Route path="/booking" element={<BookingForm/>}></Route>
+            <Route path="/booking" element={<BookingForm navigator = {props.navigator}/>}></Route>
+            <Route path="/confirmed-booking" element={<ConfirmedBooking/>}></Route>
         </Routes>
         </>
 

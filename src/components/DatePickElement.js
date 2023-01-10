@@ -2,7 +2,7 @@ import {useState} from 'react';
 const DatePickElement = (props) => {
 
     return (
-        <label for={props.subtitle}>
+        <label htmlFor={props.title + ", " +props.subtitle}>
             <div className="datepickelement" >
                 <h4>{props.title}</h4>
                 <h5>{props.subtitle}</h5>

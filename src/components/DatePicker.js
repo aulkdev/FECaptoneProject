@@ -16,8 +16,8 @@ function DatePicker(props){
             <h1>Date: {date}</h1>
             <div className="datepicker">
                 {props.items.map(i => (
-                <div className="datepickelement">
-                <input type="radio" className="datepickinput"id={i[1]} name="DatePicker" value={i[0]+", "+i[1]} onChange={onClick}/>
+                <div className="datepickelement" key={i[0]+", "+i[1]}>
+                <input type="radio" className="datepickinput"id={i[0]+", "+i[1]} name="DatePicker" value={i[0]+", "+i[1]} onChange={onClick}/>
                 <DatePickElement title={i[0]} subtitle = {i[1]} onClick={onClick}/>
                 </div>
             ))

@@ -1,7 +1,7 @@
 import logo from './Logo.svg'
 import Nav from './Nav'
 
-import Main from './Main'
+import BookingForm from './BookingForm'
 import Home from './Home'
 import {Routes, Route, Link} from 'react-router-dom';
 
@@ -18,7 +18,7 @@ function Header(){
 
         <Routes>
             <Route path="/" element={<Home/>}></Route>
-            <Route path="/booking" element={<Main/>}></Route>
+            <Route path="/booking" element={<BookingForm/>}></Route>
         </Routes>
         </>
 

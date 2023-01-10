@@ -5,7 +5,7 @@ import lemonimage from './images/lemon dessert.jpg'
 import baguette from './images/baguette.jpg'
 import FoodCard from "./components/FoodCard";
 import Testamonial from "./components/Testamonial";
-import Main from "./Main";
+import Main from "./BookingForm";
 import {Routes, Route, Link} from 'react-router-dom';
 import './Home.css'
 const Home = (props) => {

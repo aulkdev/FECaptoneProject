@@ -8,6 +8,8 @@
   font-size: 32px;
   font-weight: 500;
   margin: 0px;
+  display: flex;
+  gap: 30px;
 }
 .datepicker {
   display: flex;

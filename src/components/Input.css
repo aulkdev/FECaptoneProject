@@ -7,6 +7,8 @@
   font-family: "Markazi Text", serif;
   font-size: 32px;
   font-weight: 500;
+  display: flex;
+  gap: 30px;
 }
 .textinput {
   width: 80%;
@@ -25,4 +27,8 @@
 }
 .my42grid {
   grid-area: 4/2/4/2;
+}
+p.error {
+  margin: 0px;
+  color: red;
 }

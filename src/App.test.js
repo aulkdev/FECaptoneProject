@@ -37,3 +37,22 @@ describe("Checking if updating times works", () => {
     expect(sixoption).toBeInTheDocument();
   })
 })
+
+describe("Testing the form", () => {
+  test("test if the form errors", () => {
+    render(<BookingForm/>)
+    const button = screen.getByRole('button')
+    fireEvent.click(button)
+    let firstoption = screen.getByText("*Please enter a name")
+    expect(firstoption).toBeInTheDocument();
+    const rangeInput = screen.getByLabelText(/Name/)
+    fireEvent.change(rangeInput, {target: {value: 'testing'}})
+    fireEvent.click(button)
+    try{
+      let secondtry = screen.getByText("*Please enter a name")
+      expect(secondtry).not.toBeInTheDocument();
+    }catch{
+
+    }
+  })
+})

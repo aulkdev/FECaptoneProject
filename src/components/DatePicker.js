@@ -13,7 +13,15 @@ function DatePicker(props){
 
     return(
         <div className="fulldatepicker">
-            <h1>Date: {date}</h1>
+            <h1>Date: {date}
+            {
+                props.errors[props.inputname]!==""?(
+                    <p className="error">{props.errors[props.inputname]}</p>
+                ):(
+                    <></>
+                )
+            }
+            </h1>
             <div className="datepicker">
                 {props.items.map(i => (
                 <div className="datepickelement" key={i[0]+", "+i[1]}>

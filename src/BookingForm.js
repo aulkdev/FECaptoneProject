@@ -128,7 +128,7 @@ function BookingForm(props){
             errordispatch({type:'agreement',error:''})
         }
         if(allok && submitAPI(state)){
-            props.navigator("/confirmed-booking")
+            props.navigator("/confirmed-booking", {state:{details: state}})
         }
     }
 

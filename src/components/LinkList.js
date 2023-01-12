@@ -7,7 +7,7 @@ const LinkList = (props) => {
             <h4>{props.title}</h4>
             {
                 props.links.map(i => (
-                    <a href={i[1]}>{i[0]}</a>
+                    <a key={i[0]}href={i[1]}>{i[0]}</a>
                 ))
             }
         </div>

@@ -5,8 +5,8 @@ function Footer(){
     return(
         <footer>
             <img id="logoimage" src={logo}/>
-            <LinkList title="Social Links" links={[["Facebook","facebook.com"],["Twitter","twitter.com"],["Instagram","instagram.com"],["Trip Advisor","tripadvisor.com"]]}/>
-            <LinkList title="Further Links" links={[["Privacy Policy","facebook.com"],["Imprint","twitter.com"],["Contact","instagram.com"]]}/>
+            <LinkList title="Social Links" links={[["Facebook","facebook"],["Twitter","twitter"],["Instagram","instagram"],["Trip Advisor","tripadvisor"]]}/>
+            <LinkList title="Further Links" links={[["Privacy Policy","privacy"],["Imprint","imprint"],["Contact","contact"]]}/>
         </footer>
     )
 }

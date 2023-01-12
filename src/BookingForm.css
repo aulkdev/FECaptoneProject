@@ -29,7 +29,14 @@ main #form {
 #formbutton:active {
   background-color: #969696;
 }
-
+a.nav-item {
+  align-self: center;
+  justify-self: center;
+}
+a.nav-item button {
+  height: 65px;
+  width: 200px;
+}
 @media only screen and (max-width: 820px) {
   main #form {
     height: 95%;

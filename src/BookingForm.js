@@ -6,6 +6,7 @@ import ConfirmElement from './components/ConfirmElement';
 import Button from './components/Button';
 import {useState, useReducer, useEffect} from 'react';
 import {fetchAPI, submitAPI} from './components/api'
+import {Link} from 'react-router-dom';
 // import { useFormik } from "formik";
 // import * as Yup from 'yup';
 
@@ -86,35 +87,40 @@ function BookingForm(props){
         e.preventDefault()
         //console.log(state)
         let allok = true
-        if (state.name ==""){
+        if (state.name ===""){
             errordispatch({type:'Name', error:'*Please enter a name'})
             allok = false
         }else{
             errordispatch({type:'Name',error:''})
         }
 
-        if (state.email ==""){
+        if (state.email ===""){
             errordispatch({type:'Email', error:'*Please enter an email'})
             allok = false
-        }else{
+        }else if(!state.email.match(/^\S+@\S+$/)){
+            errordispatch({type:'Email', error:'*Please enter a correct email'})
+            allok = false
+        }
+        else{
+            console.log(state.email.match(/^\S+@\S+$/))
             errordispatch({type:'Email',error:''})
         }
 
-        if (state.date ==""){
+        if (state.date ===""){
             errordispatch({type:'DatePicker', error:'*Please select a date'})
             allok = false
         }else{
             errordispatch({type:'DatePicker',error:''})
         }
 
-        if (state.time ==""){
+        if (state.time ===""){
             errordispatch({type:'Time', error:'*Please select a time'})
             allok = false
         }else{
             errordispatch({type:'Time',error:''})
         }
 
-        if (state.people ==""){
+        if (state.people ===""){
             errordispatch({type:'People', error:'*Please select a time'})
             allok = false
         }else{
@@ -151,6 +157,7 @@ function BookingForm(props){
         <main>
             <form id="form">
                 <h1>Reserve a Table</h1>
+                <Link to="/" className="nav-item"><Button row="1" col="2"inputname="Cancel"/></Link>
                 <Input inputname="Name" inputtype="text" row="2" col="1" errors ={errorstate} setter={dispatch} id="name"/>
                 <Input inputname="Email" inputtype="email"row="2" col="2" errors = {errorstate} setter={dispatch}/>
                 <ListInput inputname="Time" items={getTimes()} row="4" col="1" errors ={errorstate}  setter={dispatch}/>
